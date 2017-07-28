@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<htlm lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="example">
+        <p>Mensagem original: "{{ message }}"</p>
+        <p>Messagem ao contrário: "{{ reservedMessage }}"</p>
+    </div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var vm = new Vue({
+        el: '#example',
+        data: {
+            message: 'Olá Vue'
+        },
+        computed:{
+            reservedMessage : function () {
+                return this.message.split('').reverse().join('')
+            }
+        }
+    })
+</script>
+</body>
+</htlm>
